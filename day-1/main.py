@@ -47,7 +47,7 @@ def get_value(line: str, idx: int, step: int) -> str:
 def main():
     total = 0
     with open('./input.txt', 'r') as file:
-        for i, row in enumerate(file.readlines()):
+        for row in file.readlines():
             row = row.strip()
             digit = get_value(row, 0, 1) + get_value(row, len(row) - 1, -1)
             total += int(digit)
